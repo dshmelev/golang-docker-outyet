@@ -129,6 +129,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 var tmpl = template.Must(template.New("tmpl").Parse(`
 <!DOCTYPE html><html><body><center>
   <h1>Hello world!</h1>
+  <h3>Hello world!</h3>
   <h2>Is Go {{.Version}} out yet?</h2>
   <h1>
   {{if .Yes}}
