@@ -128,13 +128,14 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 // tmpl is the HTML template that drives the user interface.
 var tmpl = template.Must(template.New("tmpl").Parse(`
 <!DOCTYPE html><html><body><center>
-	<h2>Is Go {{.Version}} out yet?</h2>
-	<h1>
-	{{if .Yes}}
-		<a href="{{.URL}}">YES!</a>
-	{{else}}
-		No. :-(
-	{{end}}
-	</h1>
+  <h1>Hello world!</h1>
+  <h2>Is Go {{.Version}} out yet?</h2>
+  <h1>
+  {{if .Yes}}
+    <a href="{{.URL}}">YES!</a>
+  {{else}}
+    No. :-(
+  {{end}}
+  </h1>
 </center></body></html>
 `))
